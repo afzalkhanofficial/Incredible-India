@@ -1,0 +1,1246 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 75vh;
+    }
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+body.dark-mode .hero-bg {
+    opacity: 0.6;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to bottom, transparent 75%, var(--background-light) 100%),
+        linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+    z-index: 1;
+}
+
+body.dark-mode .hero-overlay {
+    background:
+        linear-gradient(to bottom, transparent 75%, var(--background-dark) 100%),
+        linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.hero-text-wrapper {
+    max-width: 700px;
+    text-align: left;
+}
+
+.hero-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.badge-line {
+    width: 40px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.badge-text {
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 700;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-style: italic;
+    max-width: 550px;
+}
+
+body.dark-mode .hero-description {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.experience-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.experience-chip:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.chip-icon {
+    font-size: 1.25rem;
+}
+
+.explore-section-header {
+    margin-bottom: 3rem;
+}
+
+.explore-section-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-main-light);
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .explore-section-title {
+    color: var(--text-main-dark);
+}
+
+.explore-title-bar {
+    width: 6rem;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 50px;
+}
+
+.text-md-start .explore-title-bar {
+    margin-left: 0;
+}
+
+.text-md-end .explore-title-bar {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+@media (max-width: 767.98px) {
+    .explore-title-bar {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .explore-section-title {
+        font-size: 3.25rem;
+    }
+}
+
+.explore-nature-section {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 5rem 1rem 5rem;
+    position: relative;
+    z-index: 20;
+    margin-top: -5rem;
+}
+
+.explore-card {
+    position: relative;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.explore-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.explore-card:hover img {
+    transform: scale(1.05);
+}
+
+.explore-card-tall {
+    height: 500px;
+}
+
+.explore-card-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2) 50%, transparent);
+}
+
+.explore-card-body {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    max-width: 500px;
+}
+
+.explore-card-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.explore-card-title-lg {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.explore-card-title-md {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.explore-card-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.explore-card-text-sm {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .explore-card-title-lg {
+        font-size: 2.5rem;
+    }
+
+    .explore-card-title-md {
+        font-size: 1.875rem;
+    }
+}
+
+.explore-seasonal-guide {
+    margin-top: 1.5rem;
+    background-color: var(--card-light);
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+}
+
+body.dark-mode .explore-seasonal-guide {
+    background-color: var(--card-dark);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.explore-seasonal-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.dark-mode .explore-seasonal-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.explore-seasonal-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.explore-seasonal-title {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--text-main-light);
+    margin-bottom: 0;
+}
+
+body.dark-mode .explore-seasonal-title {
+    color: var(--text-main-dark);
+}
+
+.explore-seasonal-desc {
+    color: var(--text-muted-light);
+    margin-top: 0.5rem;
+    max-width: 650px;
+    font-size: 0.95rem;
+}
+
+body.dark-mode .explore-seasonal-desc {
+    color: var(--text-muted-dark);
+}
+
+@media (min-width: 768px) {
+    .explore-seasonal-guide {
+        padding: 3rem;
+    }
+
+    .explore-seasonal-title {
+        font-size: 2.5rem;
+    }
+}
+
+.explore-season-card {
+    padding: 1.5rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.explore-season-card:hover {
+    transform: translateY(-4px);
+}
+
+.explore-season-card.winter {
+    background-color: #EBF5FF;
+}
+
+.explore-season-card.winter:hover {
+    background-color: #DBEAFE;
+    border-color: #BFDBFE;
+}
+
+.explore-season-card.summer {
+    background-color: #FFFBEB;
+}
+
+.explore-season-card.summer:hover {
+    background-color: #FEF3C7;
+    border-color: #FDE68A;
+}
+
+.explore-season-card.monsoon {
+    background-color: #F0FDFA;
+}
+
+.explore-season-card.monsoon:hover {
+    background-color: #CCFBF1;
+    border-color: #99F6E4;
+}
+
+.explore-season-card.postmonsoon {
+    background-color: rgba(255, 153, 0, 0.05);
+}
+
+.explore-season-card.postmonsoon:hover {
+    background-color: rgba(255, 153, 0, 0.1);
+    border-color: rgba(255, 153, 0, 0.2);
+}
+
+body.dark-mode .explore-season-card {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+body.dark-mode .explore-season-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.explore-season-top {
+    flex: 0 0 auto;
+}
+
+.explore-season-bottom {
+    margin-top: auto;
+}
+
+.explore-season-icon-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.explore-season-icon {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.explore-season-card:hover .explore-season-icon {
+    transform: scale(1.1);
+}
+
+.winter-icon {
+    color: #3B82F6;
+}
+
+.summer-icon {
+    color: #F59E0B;
+}
+
+.monsoon-icon {
+    color: #14B8A6;
+}
+
+.postmonsoon-icon {
+    color: var(--primary);
+}
+
+.explore-season-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.winter-badge {
+    color: #1D4ED8;
+    background-color: #DBEAFE;
+}
+
+.summer-badge {
+    color: #D97706;
+    background-color: #FEF3C7;
+}
+
+.monsoon-badge {
+    color: #0D9488;
+    background-color: #CCFBF1;
+}
+
+.postmonsoon-badge {
+    color: var(--primary);
+    background-color: #FFEDD5;
+}
+
+body.dark-mode .winter-badge {
+    background-color: rgba(37, 99, 235, 0.2);
+    color: #93C5FD;
+}
+
+body.dark-mode .summer-badge {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #FCD34D;
+}
+
+body.dark-mode .monsoon-badge {
+    background-color: rgba(20, 184, 166, 0.2);
+    color: #5EEAD4;
+}
+
+body.dark-mode .postmonsoon-badge {
+    background-color: rgba(255, 153, 0, 0.2);
+    color: var(--primary);
+}
+
+.explore-season-name {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main-light);
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .explore-season-name {
+    color: var(--text-main-dark);
+}
+
+.explore-season-text {
+    font-size: 0.85rem;
+    color: var(--text-muted-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+body.dark-mode .explore-season-text {
+    color: var(--text-muted-dark);
+}
+
+.explore-pack-box {
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.winter-pack {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #DBEAFE;
+}
+
+.summer-pack {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #FEF3C7;
+}
+
+.monsoon-pack {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #CCFBF1;
+}
+
+.postmonsoon-pack {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #FFEDD5;
+}
+
+body.dark-mode .explore-pack-box {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .winter-pack {
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+body.dark-mode .summer-pack {
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+body.dark-mode .monsoon-pack {
+    border-color: rgba(20, 184, 166, 0.2);
+}
+
+body.dark-mode .postmonsoon-pack {
+    border-color: rgba(255, 153, 0, 0.2);
+}
+
+.explore-pack-title {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+    gap: 0.25rem;
+}
+
+.explore-pack-title .material-symbols-outlined {
+    font-size: 1rem;
+}
+
+.winter-pack-title {
+    color: #1D4ED8;
+}
+
+.summer-pack-title {
+    color: #B45309;
+}
+
+.monsoon-pack-title {
+    color: #0F766E;
+}
+
+.postmonsoon-pack-title {
+    color: var(--primary-hover);
+}
+
+body.dark-mode .winter-pack-title {
+    color: #93C5FD;
+}
+
+body.dark-mode .summer-pack-title {
+    color: #FCD34D;
+}
+
+body.dark-mode .monsoon-pack-title {
+    color: #5EEAD4;
+}
+
+body.dark-mode .postmonsoon-pack-title {
+    color: var(--primary);
+}
+
+.explore-pack-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.explore-pack-list li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.75rem;
+    color: var(--text-muted-light);
+}
+
+body.dark-mode .explore-pack-list li {
+    color: var(--text-muted-dark);
+}
+
+.explore-pack-list li .material-symbols-outlined {
+    font-size: 0.9rem;
+    margin-right: 0.375rem;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+.winter-check {
+    color: #3B82F6;
+}
+
+.summer-check {
+    color: #F59E0B;
+}
+
+.monsoon-check {
+    color: #14B8A6;
+}
+
+.postmonsoon-check {
+    color: var(--primary);
+}
+
+.explore-best-places {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.winter-places {
+    border-top-color: #BFDBFE;
+}
+
+.summer-places {
+    border-top-color: #FDE68A;
+}
+
+.monsoon-places {
+    border-top-color: #99F6E4;
+}
+
+.postmonsoon-places {
+    border-top-color: #FFEDD5;
+}
+
+body.dark-mode .explore-best-places {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.explore-places-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.winter-places .explore-places-label {
+    color: #1D4ED8;
+}
+
+.summer-places .explore-places-label {
+    color: #B45309;
+}
+
+.monsoon-places .explore-places-label {
+    color: #0F766E;
+}
+
+.postmonsoon-places .explore-places-label {
+    color: var(--primary-hover);
+}
+
+body.dark-mode .winter-places .explore-places-label {
+    color: #93C5FD;
+}
+
+body.dark-mode .summer-places .explore-places-label {
+    color: #FCD34D;
+}
+
+body.dark-mode .monsoon-places .explore-places-label {
+    color: #5EEAD4;
+}
+
+body.dark-mode .postmonsoon-places .explore-places-label {
+    color: var(--primary);
+}
+
+.explore-places-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-main-light);
+    margin: 0;
+}
+
+body.dark-mode .explore-places-text {
+    color: var(--text-main-dark);
+}
+
+.explore-arts-section {
+    padding: 5rem 0;
+    background-color: var(--card-light);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .explore-arts-section {
+    background-color: var(--card-dark);
+}
+
+.explore-art-card {
+    position: relative;
+    height: 450px;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.explore-art-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.explore-art-card:hover img {
+    transform: scale(1.1);
+}
+
+.dark-gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 50%, transparent);
+}
+
+.explore-art-card-body {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+}
+
+.explore-art-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.explore-art-icon.orange {
+    background-color: var(--primary);
+}
+
+.explore-art-icon.deeporange {
+    background-color: #EA580C;
+}
+
+.explore-art-icon .material-symbols-outlined {
+    font-size: 1.5rem;
+}
+
+.explore-art-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.explore-art-text {
+    color: #D1D5DB;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.explore-lang-card {
+    background-color: #0F172A;
+}
+
+.explore-lang-card img {
+    opacity: 0.6;
+    mix-blend-mode: overlay;
+    transition: transform 0.5s ease;
+}
+
+.explore-lang-card:hover img {
+    transform: scale(1.05);
+}
+
+.explore-lang-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(49, 46, 129, 0.8), rgba(88, 28, 135, 0.8));
+}
+
+.explore-lang-body {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 10;
+}
+
+.explore-lang-icon {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.explore-lang-title {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.explore-lang-text {
+    color: #C7D2FE;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+}
+
+.explore-lang-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.explore-lang-btn:hover {
+    background-color: #fff;
+    color: #312E81;
+}
+
+.explore-life-section {
+    padding: 5rem 0;
+    background-color: var(--background-light);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .explore-life-section {
+    background-color: var(--background-dark);
+}
+
+.explore-bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    grid-auto-rows: 300px;
+}
+
+@media (min-width: 992px) {
+    .explore-bento-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.explore-bento-people,
+.explore-bento-traditions,
+.explore-bento-festivals {
+    position: relative;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.explore-bento-people img,
+.explore-bento-traditions img,
+.explore-bento-festivals img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.explore-bento-people:hover img,
+.explore-bento-traditions:hover img,
+.explore-bento-festivals:hover img {
+    transform: scale(1.05);
+}
+
+@media (min-width: 992px) {
+    .explore-bento-people {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .explore-bento-traditions {
+        grid-column: span 2;
+    }
+
+    .explore-bento-festivals {
+        grid-column: span 2;
+    }
+}
+
+.explore-bento-body {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 10;
+}
+
+.explore-bento-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #F97316;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.explore-bento-title-lg {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.explore-bento-title-md {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.explore-bento-text {
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 0.5rem;
+    max-width: 380px;
+    font-size: 0.9rem;
+}
+
+.explore-bento-text-sm {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.explore-bento-festivals {
+    background-color: var(--primary);
+}
+
+.explore-bento-festivals img {
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+}
+
+.explore-bento-festivals:hover img {
+    transform: scale(1.1);
+}
+
+.explore-bento-fest-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 10;
+}
+
+.explore-fest-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.explore-fest-icon .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.explore-fest-text {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.explore-fest-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.explore-fest-dots .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.explore-fest-dots .dot.active {
+    background-color: #fff;
+}
+
+.explore-faq-section {
+    padding: 5rem 0;
+    background-color: var(--card-light);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .explore-faq-section {
+    background-color: var(--card-dark);
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.explore-faq-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.explore-faq-badge {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 50px;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.explore-faq-title {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-main-light);
+    margin-bottom: 1rem;
+}
+
+body.dark-mode .explore-faq-title {
+    color: var(--text-main-dark);
+}
+
+.explore-faq-subtitle {
+    color: var(--text-muted-light);
+}
+
+body.dark-mode .explore-faq-subtitle {
+    color: var(--text-muted-dark);
+}
+
+.explore-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.explore-faq-item {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: var(--card-light);
+    transition: all var(--transition-fast);
+}
+
+body.dark-mode .explore-faq-item {
+    background-color: var(--card-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.explore-faq-item.active {
+    border-color: var(--primary);
+    box-shadow: 0 4px 15px rgba(255, 153, 0, 0.15);
+}
+
+.explore-faq-question {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-main-light);
+}
+
+body.dark-mode .explore-faq-question {
+    color: var(--text-main-dark);
+}
+
+.explore-faq-item.active .explore-faq-question {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.explore-faq-question:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+body.dark-mode .explore-faq-question:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.explore-faq-item.active .explore-faq-question:hover {
+    background-color: var(--primary);
+}
+
+.explore-faq-q-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.explore-faq-q-inner .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.explore-faq-item.active .explore-faq-q-inner .material-symbols-outlined {
+    color: #fff;
+}
+
+.explore-faq-arrow {
+    color: #9CA3AF;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.explore-faq-item.active .explore-faq-arrow {
+    color: #fff;
+}
+
+.explore-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.explore-faq-answer p {
+    padding: 1.5rem;
+    color: var(--text-muted-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+body.dark-mode .explore-faq-answer p {
+    color: var(--text-muted-dark);
+}
+
+.explore-faq-item.active .explore-faq-answer {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+body.dark-mode .explore-faq-item.active .explore-faq-answer {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}

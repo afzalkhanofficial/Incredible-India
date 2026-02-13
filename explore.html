@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore India's Rich Heritage - A journey through the timeless beauty of nature, ancient arts, and vibrant celebrations.">
+    <meta name="keywords" content="India, Heritage, Tourism, Travel, Culture, Festivals, Explore">
+    <title>Explore India's Rich Heritage - Incredible India</title>
+
+    <!-- Bootstrap Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts: Playfair Display (Headings) & Poppins (Body) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Material Symbols (Outlined) -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
+    <!-- Shared Stylesheet -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link href="css/explore.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         Primary Navigation Bar
+         - Fixed-top navbar with glassmorphism backdrop
+         - Responsive collapse for mobile viewports
+         ============================================================ -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <span class="material-icons text-primary" style="font-size: 2rem;"></span>
+                <span>Incredible<span class="text-primary">India</span></span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary-custom" href="contact.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         Hero Section
+         - Full-viewport hero with background image and gradient overlay
+         - Experience category chips for quick navigation context
+         ============================================================ -->
+    <header class="hero">
+        <img src="assest/p13.png" alt="Serene Indian Tea Gardens" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text-wrapper">
+                <div class="hero-badge">
+                    <span class="badge-line"></span>
+                    <span class="badge-text">A Tapestry of Wonders</span>
+                </div>
+                <h1 class="hero-title">Explore India's <br>Rich Heritage</h1>
+                <p class="hero-description">
+                    From the mist-covered emerald slopes of the tea gardens to the echoing chants of ancient temples,
+                    immerse yourself in a journey through time and tradition.
+                </p>
+                <div class="chip-container">
+                    <button class="experience-chip">
+                        <span class="material-symbols-outlined chip-icon">self_improvement</span>
+                        Spiritual
+                    </button>
+                    <button class="experience-chip">
+                        <span class="material-symbols-outlined chip-icon">hiking</span>
+                        Adventure
+                    </button>
+                    <button class="experience-chip">
+                        <span class="material-symbols-outlined chip-icon">cruelty_free</span>
+                        Wildlife
+                    </button>
+                    <button class="experience-chip">
+                        <span class="material-symbols-outlined chip-icon">spa</span>
+                        Wellness
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         Nature & Heritage Section
+         - Overlapping card grid showcasing heritage destinations
+         - Includes an embedded Seasonal Travel Guide sub-section
+         ============================================================ -->
+    <section class="explore-nature-section">
+        <div class="container">
+            <div class="explore-section-header text-center text-md-start">
+                <h2 class="explore-section-title">Nature & Heritage</h2>
+                <div class="explore-title-bar"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Primary Heritage Card -->
+                <div class="col-md-8">
+                    <div class="explore-card explore-card-tall group">
+                        <img src="assest/p14.png" alt="Ancient architecture in Hampi">
+                        <div class="explore-card-gradient"></div>
+                        <div class="explore-card-body">
+                            <span class="explore-card-tag">History</span>
+                            <h3 class="explore-card-title-lg">Destinations & Heritage</h3>
+                            <p class="explore-card-text">Explore the architectural marvels and UNESCO World Heritage
+                                sites that tell the stories of India's glorious past.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Nature Card -->
+                <div class="col-md-4">
+                    <div class="explore-card explore-card-tall group">
+                        <img src="assest/p13.png" alt="Tea gardens in Munnar">
+                        <div class="explore-card-gradient"></div>
+                        <div class="explore-card-body">
+                            <span class="explore-card-tag">Nature</span>
+                            <h3 class="explore-card-title-md">Geography & Landscapes</h3>
+                            <p class="explore-card-text-sm">From the Himalayas to the coastal plains.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------------
+                 Seasonal Travel Guide
+                 - Four season cards with packing tips and best destinations
+                 - Color-coded by season for visual differentiation
+                 -------------------------------------------------------- -->
+            <div class="explore-seasonal-guide">
+                <div class="explore-seasonal-header">
+                    <div>
+                        <div class="explore-seasonal-label">
+                            <span class="material-symbols-outlined">thermostat</span>
+                            <span>Plan Smart</span>
+                        </div>
+                        <h3 class="explore-seasonal-title">Seasonal Travel Guide</h3>
+                        <p class="explore-seasonal-desc">India's climate varies from tropical in the south to temperate
+                            in the north. Choose the perfect season for your adventure.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+
+                    <!-- Season Card: Winter (Dec–Feb) -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="explore-season-card winter">
+                            <div class="explore-season-top">
+                                <div class="explore-season-icon-row">
+                                    <span
+                                        class="material-symbols-outlined explore-season-icon winter-icon">ac_unit</span>
+                                    <span class="explore-season-badge winter-badge">Dec - Feb</span>
+                                </div>
+                                <h4 class="explore-season-name">Winter</h4>
+                                <p class="explore-season-text">Pleasant and dry across most of India. Perfect for desert
+                                    safaris and exploring heritage sites comfortably.</p>
+                            </div>
+                            <div class="explore-season-bottom">
+                                <div class="explore-pack-box winter-pack">
+                                    <h5 class="explore-pack-title winter-pack-title">
+                                        <span class="material-symbols-outlined">backpack</span> What to Pack
+                                    </h5>
+                                    <ul class="explore-pack-list">
+                                        <li><span class="material-symbols-outlined winter-check">check_circle</span>
+                                            <span>Heavy woolens for North</span>
+                                        </li>
+                                        <li><span class="material-symbols-outlined winter-check">check_circle</span>
+                                            <span>Light layers for South</span>
+                                        </li>
+                                        <li><span class="material-symbols-outlined winter-check">check_circle</span>
+                                            <span>Moisturizer & lip balm</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="explore-best-places winter-places">
+                                    <span class="explore-places-label">Best Places:</span>
+                                    <p class="explore-places-text">Rajasthan, Kerala, Goa, Delhi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Season Card: Summer (Mar–May) -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="explore-season-card summer">
+                            <div class="explore-season-top">
+                                <div class="explore-season-icon-row">
+                                    <span class="material-symbols-outlined explore-season-icon summer-icon">sunny</span>
+                                    <span class="explore-season-badge summer-badge">Mar - May</span>
+                                </div>
+                                <h4 class="explore-season-name">Summer</h4>
+                                <p class="explore-season-text">Temperatures rise. Ideal time to escape to the cool
+                                    Himalayas or spot tigers in national parks as water holes dry up.</p>
+                            </div>
+                            <div class="explore-season-bottom">
+                                <div class="explore-pack-box summer-pack">
+                                    <h5 class="explore-pack-title summer-pack-title">
+                                        <span class="material-symbols-outlined">backpack</span> What to Pack
+                                    </h5>
+                                    <ul class="explore-pack-list">
+                                        <li><span class="material-symbols-outlined summer-check">check_circle</span>
+                                            <span>Breathable cottons</span>
+                                        </li>
+                                        <li><span class="material-symbols-outlined summer-check">check_circle</span>
+                                            <span>Sunblock & sunglasses</span>
+                                        </li>
+                                        <li><span class="material-symbols-outlined summer-check">check_circle</span>
+                                            <span>Wide-brimmed hats</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="explore-best-places summer-places">
+                                    <span class="explore-places-label">Best Places:</span>
+                                    <p class="explore-places-text">Himachal, Ladakh, Kashmir, Sikkim</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Season Card: Monsoon (Jun–Sep) -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="explore-season-card monsoon">
+                            <div class="explore-season-top">
+                                <div class="explore-season-icon-row">
+                                    <span
+                                        class="material-symbols-outlined explore-season-icon monsoon-icon">rainy</span>
+                                    <span class="explore-season-badge monsoon-badge">Jun - Sep</span>
+                                </div>
+                                <h4 class="explore-season-name">Monsoon</h4>
+                                <p class="explore-season-text">Lush green landscapes and rejuvenating rains. Great for
+                                    Ayurveda retreats and witnessing nature's abundance.</p>
+                            </div>
+                            <div class="explore-season-bottom">
+                                <div class="explore-pack-box monsoon-pack">
+                                    <h5 class="explore-pack-title monsoon-pack-title">
+                                        <span class="material-symbols-outlined">backpack</span> What to Pack
+                                    </h5>
+                                    <ul class="explore-pack-list">
+                                        <li><span class="material-symbols-outlined monsoon-check">check_circle</span>
+                                            <span>Waterproof gear</span>
+                                        </li>
+                                        <li><span class="material-symbols-outlined monsoon-check">check_circle</span>
+                                            <span>Quick-dry fabrics</span>
+                                        </li>
+                                        <li><span class="material-symbols-outlined monsoon-check">check_circle</span>
+                                            <span>Umbrella & rain boots</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="explore-best-places monsoon-places">
+                                    <span class="explore-places-label">Best Places:</span>
+                                    <p class="explore-places-text">Western Ghats, Kerala, Valley of Flowers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Season Card: Post-Monsoon (Oct–Nov) -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="explore-season-card postmonsoon">
+                            <div class="explore-season-top">
+                                <div class="explore-season-icon-row">
+                                    <span
+                                        class="material-symbols-outlined explore-season-icon postmonsoon-icon">eco</span>
+                                    <span class="explore-season-badge postmonsoon-badge">Oct - Nov</span>
+                                </div>
+                                <h4 class="explore-season-name">Post-Monsoon</h4>
+                                <p class="explore-season-text">Clear skies and moderate temperatures return. The festive
+                                    season begins, making it a vibrant time to visit.</p>
+                            </div>
+                            <div class="explore-season-bottom">
+                                <div class="explore-pack-box postmonsoon-pack">
+                                    <h5 class="explore-pack-title postmonsoon-pack-title">
+                                        <span class="material-symbols-outlined">backpack</span> What to Pack
+                                    </h5>
+                                    <ul class="explore-pack-list">
+                                        <li><span
+                                                class="material-symbols-outlined postmonsoon-check">check_circle</span>
+                                            <span>Light woolens</span>
+                                        </li>
+                                        <li><span
+                                                class="material-symbols-outlined postmonsoon-check">check_circle</span>
+                                            <span>Comfortable walking shoes</span>
+                                        </li>
+                                        <li><span
+                                                class="material-symbols-outlined postmonsoon-check">check_circle</span>
+                                            <span>Ethnic wear for festivals</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="explore-best-places postmonsoon-places">
+                                    <span class="explore-places-label">Best Places:</span>
+                                    <p class="explore-places-text">Golden Triangle, Varanasi, Mysore</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         Arts & Expression Section
+         - Three cards: Art & Handicrafts, Regional Cultures, Languages
+         - Language card features a unique gradient overlay design
+         ============================================================ -->
+    <section class="explore-arts-section">
+        <div class="container">
+            <div class="explore-section-header text-center text-md-end">
+                <h2 class="explore-section-title">Arts & Expression</h2>
+                <div class="explore-title-bar ms-auto"></div>
+            </div>
+            <div class="row g-4">
+
+                <!-- Art Card: Handicrafts -->
+                <div class="col-md-4">
+                    <div class="explore-art-card group">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0wjeSGVESfz6bmSCPxkknLjGqO4NqgyabnffwJ4inNuENTU48yonvXywItGMqx2MjSi2EEpC2romNKAfXylQr3uJynyryWvTQYZ4IuLR0sPVaIh34aL4MxBVBZa4KuM_96xiLKKXKfIULe4bSwP2tEx8ViIhPsuIP4s_VXupiPOHXHhBtPy0VWSqxvUhs_VAHxGy4PlW1AbqAmKg32bsmkqDROJvhFWNZNdwM1M8dAjKPymO7eVj1Yu52JmGKKsFPjsWPawQSZY29"
+                            alt="Indian handicrafts">
+                        <div class="explore-card-gradient dark-gradient"></div>
+                        <div class="explore-art-card-body">
+                            <div class="explore-art-icon orange">
+                                <span class="material-symbols-outlined">palette</span>
+                            </div>
+                            <h3 class="explore-art-title">Art & Handicrafts</h3>
+                            <p class="explore-art-text">Discover the intricate world of Indian textiles, pottery, and
+                                traditional paintings passed down through generations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Card: Regional Cultures -->
+                <div class="col-md-4">
+                    <div class="explore-art-card group">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuIrumrkIg4Eo65KemxjQ25AyHvilEFOi6ketCA038D9awD6ATfKG1FWRCkGY8icZ56jUkpu2IV8Noj2bcRfNE_y71J0WQjjk2fQ7HgTRWadx_xqQO7WuKleL0zYIOyf6LAwKY1D-62e6Nod2sYExiHTD2HIrn2T-J4cpvBBkvbFCBAK6hKWHCP7XZKYajfPdeAC-m7Pwgg2ALiL3W7zgw_q4PwxK--tgFsCbh2WN44hz_WkQBCx7aRb4yZ4rZqu4mJRNVBjPiF5zN"
+                            alt="Classical Indian Dance">
+                        <div class="explore-card-gradient dark-gradient"></div>
+                        <div class="explore-art-card-body">
+                            <div class="explore-art-icon deeporange">
+                                <span class="material-symbols-outlined">theater_comedy</span>
+                            </div>
+                            <h3 class="explore-art-title">Regional Cultures</h3>
+                            <p class="explore-art-text">Immerse yourself in the distinct traditions, clothing, and
+                                performing arts of India's 28 states.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Card: Symphony of Languages -->
+                <div class="col-md-4">
+                    <div class="explore-art-card explore-lang-card group">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiDLRr4gmPZsDxNEMot6f-gSLuvD4cHM4avxZKIw45M9b-hH8tWEGMr_F9rIgGyMCNbTGntqnM8orWVPvb8ygiDe-y2h66gZBrL2pX8jzx5_dS_-imnwyoOuo3Gl2vU5aM50KsVyBdU1krDIAjEY_f_LwPWZKjM4cDpx2woAtNvhXDgDQdOqE1BjrdDuvLP8QQu-b0YUSPLNfK8dqVOIP-2a0pDUQ9X3TD0d8cRZrB_l1kEQgviWrpCIsf0XJ5k8vvEJ-QxcrgijM-"
+                            alt="Ancient scripts">
+                        <div class="explore-lang-overlay"></div>
+                        <div class="explore-lang-body">
+                            <span class="material-symbols-outlined explore-lang-icon">translate</span>
+                            <h3 class="explore-lang-title">Symphony of Languages</h3>
+                            <p class="explore-lang-text">India speaks in many tongues. Explore the linguistic diversity
+                                with over 19,500 languages and dialects.</p>
+                            <button class="explore-lang-btn">Listen Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         Life & Celebrations Section
+         - Bento grid layout: People, Traditions, and Festivals
+         - Responsive grid adapts from single column to 4-column layout
+         ============================================================ -->
+    <section class="explore-life-section">
+        <div class="container">
+            <div class="explore-section-header text-center text-md-start">
+                <h2 class="explore-section-title">Life & Celebrations</h2>
+                <div class="explore-title-bar"></div>
+            </div>
+            <div class="explore-bento-grid">
+
+                <!-- Bento Card: People & Communities -->
+                <div class="explore-bento-people group">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmUo8mn2ISE3wbCcFb1Vy4xGsk-B6rsFPGbXpmpdMDsISMpJeZTRk41b2afGuTmDxYJi35eBqAHKBaeysI-azBBTH5_h9Xj8cKa9XzLbPKGoqdSfpIPVkOhGii9llaSr4-KLlyEmHqw9WG134LtRaHYUA9LuGFDI869RB9YIGfp0r94NMVo4QqXtGPZnBRhDMkNAtqLWxvFBOfTS5yr5h_AE2LzrsqiPzkD5aGmDrRNOFeUDQ3dbFgAA3GxuztTTWZ4ewe1M10zLZ0"
+                        alt="People of India portrait">
+                    <div class="explore-card-gradient"></div>
+                    <div class="explore-bento-body">
+                        <span class="explore-bento-tag">Society</span>
+                        <h3 class="explore-bento-title-lg">People & Communities</h3>
+                        <p class="explore-bento-text">Meet the warm, hospitable people who are the true heart of
+                            Incredible India.</p>
+                    </div>
+                </div>
+
+                <!-- Bento Card: Timeless Traditions -->
+                <div class="explore-bento-traditions group">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtZZ-94bPCucrbizAy8gv8rXFSOFtCtO9kaKGpPoGHK23JbjQe2kC5TvU4M3kz7zEWcHCK1ZLERKThCQ11F0LPvnkv4iWTghxshJzV4uqZ6eCgsXWG1_erG01Vd7Z534VJNj9Oqyn4r2uyI1kLR8RR4VrYmAUZ30ESU2O4BlXNQ63ri8vC5v3yMG-471bdACpH4EBt-M888RdJTdRXWUfnOZS6PLkG3GVbf6gmrgtQmqqOCTwSo5lm7_3VuWimNMgko4aNWvTNTU_A"
+                        alt="Traditional Indian Ceremony">
+                    <div class="explore-card-gradient"></div>
+                    <div class="explore-bento-body">
+                        <h3 class="explore-bento-title-md">Timeless Traditions</h3>
+                        <p class="explore-bento-text-sm">Rituals that bridge the past and present.</p>
+                    </div>
+                </div>
+
+                <!-- Bento Card: Festivals Showcase -->
+                <div class="explore-bento-festivals group">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5GKr95ztsGGUR2KHZTLntPLjqUyZ78jk-BMSzlD5rUvoVp8DTru53RW16lszRhgxt895cm2EjY5_nc-R0DvWNDxidif7-2sPSVFQolZXSfeiecNtcRYCm1lEzd2_UqYs2_IuBz8bdT7qtvHY3PCZcYey2CnQeFeVI5e6Vvr8BiRk5TvVUcm7Pk822LGJW9sDsQgxM0aajsWl7KcnqgZEo_DMTkz9znpBG2ruTosaC6wutDU2UZgGC3xFQvanHjROgaivQ_7HiC_iZ"
+                        alt="Holi festival colors">
+                    <div class="explore-bento-fest-content">
+                        <div class="explore-fest-icon">
+                            <span class="material-symbols-outlined">celebration</span>
+                        </div>
+                        <h3 class="explore-bento-title-lg">Festivals Showcase</h3>
+                        <p class="explore-fest-text">Experience the magic of Diwali, Holi, Eid, Christmas and more.</p>
+                        <div class="explore-fest-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ Section — Travel Essentials
+         - Accordion-style FAQ with expand/collapse functionality
+         - Managed via explore.js for smooth toggle transitions
+         ============================================================ -->
+    <section class="explore-faq-section">
+        <div class="container">
+            <div class="explore-faq-wrapper">
+                <div class="text-center mb-5">
+                    <span class="explore-faq-badge">Help Center</span>
+                    <h2 class="explore-faq-title">Travel Essentials</h2>
+                    <p class="explore-faq-subtitle">Quick answers for your journey.</p>
+                </div>
+                <div class="explore-faq-list">
+
+                    <!-- FAQ Item 1: Visa Requirements (Default Open) -->
+                    <div class="explore-faq-item active">
+                        <button class="explore-faq-question" data-faq="0">
+                            <div class="explore-faq-q-inner">
+                                <span class="material-symbols-outlined">verified_user</span>
+                                <span>What visa do I need?</span>
+                            </div>
+                            <span class="material-symbols-outlined explore-faq-arrow">expand_less</span>
+                        </button>
+                        <div class="explore-faq-answer" style="max-height: 200px;">
+                            <p>Most foreign nationals need a visa. The e-Visa is available for tourists from over 160
+                                countries. Apply at least 4 days before travel.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2: Best Time to Visit -->
+                    <div class="explore-faq-item">
+                        <button class="explore-faq-question" data-faq="1">
+                            <div class="explore-faq-q-inner">
+                                <span class="material-symbols-outlined">calendar_today</span>
+                                <span>Best time to visit?</span>
+                            </div>
+                            <span class="material-symbols-outlined explore-faq-arrow">expand_more</span>
+                        </button>
+                        <div class="explore-faq-answer">
+                            <p>October to March is generally the best time to visit India. The weather is pleasant and
+                                perfect for sightseeing across most regions.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3: Currency Information -->
+                    <div class="explore-faq-item">
+                        <button class="explore-faq-question" data-faq="2">
+                            <div class="explore-faq-q-inner">
+                                <span class="material-symbols-outlined">currency_exchange</span>
+                                <span>Currency used?</span>
+                            </div>
+                            <span class="material-symbols-outlined explore-faq-arrow">expand_more</span>
+                        </button>
+                        <div class="explore-faq-answer">
+                            <p>The Indian Rupee (INR/₹) is the official currency. Major credit cards are widely accepted
+                                in cities. ATMs are readily available throughout the country.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         Site Footer
+         - Brand info, social links, navigation, and newsletter form
+         - Legal links and copyright notice
+         ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5 mb-5">
+
+                <!-- Footer Column: Brand & Social -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <span class="material-icons"></span>
+                        <span>Incredible<span class="text-primary">India</span></span>
+                    </div>
+                    <p class="footer-description">
+                        Ministry of Tourism, Government of India. Promoting tourism and cultural heritage of India to
+                        the world.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Footer Column: Explore Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="explore.html">Destinations</a></li>
+                        <li><a href="explore.html">Experiences</a></li>
+                        <li><a href="explore.html">Tour Packages</a></li>
+                        <li><a href="explore.html">Events &amp; Festivals</a></li>
+                        <li><a href="explore.html">Map of India</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column: Travel Info Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Travel Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Visa Information</a></li>
+                        <li><a href="contact.html">Travel Guidelines</a></li>
+                        <li><a href="contact.html">Accommodation</a></li>
+                        <li><a href="contact.html">Safety &amp; Security</a></li>
+                        <li><a href="contact.html">Help &amp; Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column: Newsletter Subscription -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Subscribe</h4>
+                    <div class="footer-subscribe">
+                        <p>Get the latest travel updates and offers.</p>
+                        <form class="footer-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom: Copyright & Legal -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2023 Ministry of Tourism, Government of India. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Shared Script -->
+    <script src="js/script.js"></script>
+
+    <!-- Page Script -->
+    <script src="js/explore.js"></script>
+</body>
+
+</html>
