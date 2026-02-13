@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
 </p>
 
-<h1 align="center">🇮🇳 Incredible India — Tourism Website</h1>
+<h1 align="center">Incredible India — Tourism Website</h1>
 
 <p align="center">
   <strong>A stunning, fully responsive multi-page website promoting the beauty, culture, and heritage of India.</strong>
@@ -17,7 +17,6 @@
   <a href="#-tech-stack">Tech Stack</a> •
   <a href="#-project-structure">Structure</a> •
   <a href="#-getting-started">Getting Started</a> •
-  <a href="#-screenshots">Screenshots</a> •
   <a href="#-license">License</a>
 </p>
 
@@ -129,25 +128,6 @@ incredible-india/
     └── p3–p14.png          # Section images (destinations, festivals, gallery, etc.)
 ```
 
-### Architecture
-
-The project follows a **shared + page-specific** pattern to eliminate code duplication:
-
-```
-            ┌──────────────┐
-            │  styles.css  │  ← Loaded on ALL pages
-            │  script.js   │     (base, navbar, footer, utilities)
-            └──────┬───────┘
-                   │
-        ┌──────────┼──────────┐
-        ▼          ▼          ▼
-  ┌──────────┐ ┌──────────┐ ┌──────────┐
-  │ home.js  │ │explore.css│ │contact.css│
-  │          │ │explore.js │ │contact.js │
-  └──────────┘ └──────────┘ └──────────┘
-   Home Page   Explore Page  Contact Page
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -173,12 +153,6 @@ No build tools or dependencies required — this is a pure static website.
    npx serve .
    ```
 
-### Using Live Server (VS Code)
-
-1. Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
-2. Right-click `index.html` → **Open with Live Server**
-3. The site opens at `http://127.0.0.1:5500`
-
 ## 🎨 Design System
 
 ### Color Palette
@@ -198,14 +172,6 @@ No build tools or dependencies required — this is a pure static website.
 |---|---|---|
 | **Playfair Display** | 400, 600, 700 | Headings, display text |
 | **Poppins** | 300, 400, 500, 600 | Body text, UI elements |
-
-## 📸 Screenshots
-
-> **To add screenshots:** Replace the placeholders below with actual screenshot paths after capturing them.
-
-| Home Page | Explore Page | Contact Page |
-|---|---|---|
-| ![Home](screenshots/home.png) | ![Explore](screenshots/explore.png) | ![Contact](screenshots/contact.png) |
 
 ## 🤝 Contributing
 
@@ -231,5 +197,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 <p align="center">
-  Made with ❤️ for <strong>Incredible India</strong> 🇮🇳
+  Made with ❤️ for <strong>Incredible India</strong>
 </p>
+
