@@ -37,8 +37,8 @@
 - **Custom Scrollbar** — Styled WebKit scrollbar matching the site's aesthetic
 
 ### ⚡ Interactive Elements
-- **Animated Statistics Counter** — Numbers count up with easeOutQuart timing when scrolled into view (Intersection Observer)
-- **Draggable Festival Carousel** — Click-and-drag horizontal scrolling for festival cards
+- **Animated Statistics Counter** — Numbers count up sequentially when scrolled into view
+- **Festival Carousel** — Native horizontal scrolling for festival cards
 - **FAQ Accordion** — Single-open accordion pattern with smooth max-height transitions
 - **Contact Form** — Validated form with loading state and submission feedback
 - **Newsletter Subscription** — Email validation with user-friendly alerts
@@ -59,7 +59,7 @@ The landing page showcasing India's highlights:
 | **Hero** | Full-viewport header with background image and tricolor gradient text |
 | **Why Visit India** | 6 feature cards (Heritage, Culture, Geography, Hospitality, Spirituality, Languages) |
 | **Featured Destinations** | Masonry-style grid featuring Taj Mahal, Kerala, Jaipur, Himalayas & more |
-| **Land of Festivals** | Horizontally draggable carousel with Diwali, Eid, Pongal, Christmas |
+| **Land of Festivals** | Horizontal scrolling carousel with Diwali, Eid, Pongal, Christmas |
 | **Cultural Tapestry** | Language orbit visualization + living arts gallery |
 | **Statistics** | Animated counters for Heritage Sites, Languages, Annual Tourists, States |
 | **Call to Action** | Gradient CTA section encouraging exploration |
@@ -95,7 +95,7 @@ A contact and support page:
 |---|---|---|
 | **HTML5** | — | Semantic page structure |
 | **CSS3** | — | Styling, animations, custom properties, media queries |
-| **JavaScript** | ES6+ | DOM manipulation, event handling, Intersection Observer |
+| **JavaScript** | Vanilla | Basic DOM manipulation and event handling |
 | **Bootstrap** | 5.3.2 | Grid system, responsive utilities, navbar component |
 | **Bootstrap Icons** | 1.11.3 | Icon library |
 | **Google Fonts** | — | Playfair Display (headings) & Poppins (body) |
@@ -118,7 +118,7 @@ incredible-india/
 │
 ├── js/
 │   ├── script.js           # Shared JS (navbar, scroll, menu, newsletter, validation)
-│   ├── home.js             # Home page JS (stats animation, draggable carousel)
+│   ├── home.js             # Home page JS (stats animation)
 │   ├── explore.js          # Explore page JS (FAQ accordion)
 │   └── contact.js          # Contact page JS (form, FAQ, newsletter)
 │
@@ -199,4 +199,3 @@ This project is open source and available under the [MIT License](LICENSE).
 <p align="center">
   Made with ❤️ for <strong>Incredible India</strong>
 </p>
-
