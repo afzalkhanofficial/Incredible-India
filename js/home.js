@@ -1,94 +1,80 @@
-document.addEventListener('DOMContentLoaded', () => {
+// --- Stats Animation Logic ---
+var statsSection = document.getElementById('stats-section');
+var statsAnimated = false;
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
+function startCounter(counter) {
+    if (counter.innerText !== "0") return;
 
-                const cards = entry.target.querySelectorAll('.stat-card');
-                cards.forEach((card, index) => {
-                    setTimeout(() => {
-                        card.classList.add('animate-visible');
-                    }, index * 100);
-                });
+    var targetStr = counter.getAttribute('data-target');
+    var target = parseFloat(targetStr);
+    var isInteger = (targetStr.indexOf('.') === -1);
+    var current = 0;
 
-                const counters = entry.target.querySelectorAll('.stat-counter');
-                counters.forEach(counter => {
-                    if (counter.innerText !== "0") return;
+    var steps = 66;
+    var increment = target / steps;
 
-                    const target = parseFloat(counter.getAttribute('data-target'));
-                    const duration = 2000;
-                    const startTime = performance.now();
+    var timer = setInterval(function () {
+        current += increment;
 
-                    const updateCounter = (currentTime) => {
-                        const elapsed = currentTime - startTime;
-                        const progress = Math.min(elapsed / duration, 1);
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
 
-                        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-                        const current = target * easeOutQuart;
+        if (isInteger) {
+            counter.innerText = Math.floor(current);
+        } else {
+            counter.innerText = current.toFixed(1);
+        }
 
-                        if (Number.isInteger(target)) {
-                            counter.innerText = Math.ceil(current);
-                        } else {
-                            counter.innerText = current.toFixed(1);
-                        }
+    }, 30);
+}
 
-                        if (progress < 1) {
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
+function animateStatsOnScroll() {
+    if (!statsSection || statsAnimated) return;
 
-                    requestAnimationFrame(updateCounter);
-                });
+    if (isElementInViewport(statsSection)) {
+        statsAnimated = true;
 
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+        var cards = statsSection.querySelectorAll('.stat-card');
+        for (var i = 0; i < cards.length; i++) {
+            // Using a simple setTimeout function instead of an IIFE for the cards
+            // The index `i` might be an issue in a classic loop if not handled, 
+            // but we can just use a helper function to avoid closure issues.
+            showCard(cards[i], i);
+        }
 
-    const statsSection = document.getElementById('stats-section');
-    if (statsSection) {
-        observer.observe(statsSection);
+        var counters = statsSection.querySelectorAll('.stat-counter');
+        for (var j = 0; j < counters.length; j++) {
+            startCounter(counters[j]);
+        }
+
+        window.removeEventListener('scroll', animateStatsOnScroll);
     }
+}
 
-    const festivalsScroll = document.querySelector('.festivals-scroll');
+function showCard(card, index) {
+    setTimeout(function () {
+        card.classList.add('animate-visible');
+    }, index * 100);
+}
 
-    if (festivalsScroll) {
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+// Initial check in case it's already in view on load
+animateStatsOnScroll();
 
-        festivalsScroll.addEventListener('mousedown', (e) => {
-            isDown = true;
-            festivalsScroll.style.cursor = 'grabbing';
-            startX = e.pageX - festivalsScroll.offsetLeft;
-            scrollLeft = festivalsScroll.scrollLeft;
-        });
+// Listen for scroll events
+window.addEventListener('scroll', animateStatsOnScroll);
 
-        festivalsScroll.addEventListener('mouseleave', () => {
-            isDown = false;
-            festivalsScroll.style.cursor = 'grab';
-        });
+// Note: Festivals drag-to-scroll functionality was removed to keep the JavaScript as basic as possible.
+// Users can scroll horizontally using standard native scrollbars or trackpad gestures.
 
-        festivalsScroll.addEventListener('mouseup', () => {
-            isDown = false;
-            festivalsScroll.style.cursor = 'grab';
-        });
-
-        festivalsScroll.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - festivalsScroll.offsetLeft;
-            const walk = (x - startX) * 2;
-            festivalsScroll.scrollLeft = scrollLeft - walk;
-        });
-    }
-
-});
